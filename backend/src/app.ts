@@ -28,4 +28,4 @@ app.get("/", (req: Request, res: Response) => {
 
 // Routes here
 
-export default app;
+export default server;
