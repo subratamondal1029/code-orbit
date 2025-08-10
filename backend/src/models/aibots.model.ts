@@ -6,9 +6,9 @@ const aiBotSchema = new Schema(
     model: { type: String, required: true },
     provider: { type: String, required: true },
     settings: {
-      temperature: { type: Number, required: true },
-      maxTokens: { type: Number, required: true },
-    },
+      type: Object,
+      default: {},
+    }, // additional settings/configuration for the AI bot
     avatar: { type: String }, // avatar url
   },
   { timestamps: true }
