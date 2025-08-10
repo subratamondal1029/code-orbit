@@ -1,4 +1,4 @@
-import type { IApiBase } from '../types/ApiBase.js';
+import type { IApiBase } from "../types/ApiBase.js";
 
 class ApiResponse implements IApiBase {
   success: boolean;
@@ -8,7 +8,7 @@ class ApiResponse implements IApiBase {
 
   constructor(
     status: number = 200,
-    message: string = 'Success',
+    message: string = "Success",
     data: object | Array<string> = {}
   ) {
     this.status = status;

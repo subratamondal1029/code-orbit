@@ -1,4 +1,4 @@
-import mongoose, { Schema, model } from 'mongoose';
+import mongoose, { Schema, model } from "mongoose";
 
 const roomSchema = new Schema(
   {
@@ -9,16 +9,16 @@ const roomSchema = new Schema(
     participants: [
       {
         isMuted: { type: Boolean, default: false },
-        user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+        user: { type: Schema.Types.ObjectId, ref: "User", required: true },
       },
     ],
-    messages: [{ type: Schema.Types.ObjectId, ref: 'Message' }],
-    AiChats: [{ type: Schema.Types.ObjectId, ref: 'Message' }],
-    code: [{ type: Schema.Types.ObjectId, ref: 'Code' }],
+    messages: [{ type: Schema.Types.ObjectId, ref: "Message" }],
+    AiChats: [{ type: Schema.Types.ObjectId, ref: "Message" }],
+    code: [{ type: Schema.Types.ObjectId, ref: "Code" }],
   },
   { timestamps: true }
 );
 
-const Room = model('Room', roomSchema);
+const Room = model("Room", roomSchema);
 
 export default Room;

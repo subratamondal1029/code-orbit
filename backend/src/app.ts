@@ -1,12 +1,12 @@
-import express, { Request, Response } from 'express';
-import cors from 'cors';
-import { createServer } from 'http';
-import { Server } from 'socket.io';
-import setupIO from './socket/config.js';
-import ApiResponse from './utils/ApiResponse.js';
+import express, { Request, Response } from "express";
+import cors from "cors";
+import { createServer } from "http";
+import { Server } from "socket.io";
+import setupIO from "./socket/config.js";
+import ApiResponse from "./utils/ApiResponse.js";
 
 const corsConfig = {
-  origin: process.env.ORIGIN || 'http://localhost:5173',
+  origin: process.env.ORIGIN || "http://localhost:5173",
   credentials: true,
 };
 
@@ -20,10 +20,10 @@ setupIO(io);
 app.use(cors(corsConfig));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.set('io', io);
+app.set("io", io);
 
-app.get('/', (req: Request, res: Response) => {
-  res.json(new ApiResponse(200, 'ok'));
+app.get("/", (req: Request, res: Response) => {
+  res.json(new ApiResponse(200, "ok"));
 });
 
 // Routes here
