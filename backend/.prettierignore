@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+coverage
+.next
+.cache
+*.min.js
+package-lock.json
+pnpm-workspace.yaml
+pnpm-lock.yaml
