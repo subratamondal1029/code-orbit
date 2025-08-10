@@ -1,6 +1,6 @@
-import "./config.js";
-import app from "./app.js";
-import connectDB from "./db/mongodb.js";
+import './config.js';
+import app from './app.js';
+import connectDB from './db/mongodb.js';
 
 const PORT = process.env.PORT || 8000;
 
@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8000;
       console.log(`Server started at port ${PORT}`);
     });
   } catch (error) {
-    console.error("Error starting the application:", error);
+    console.error('Error starting the application:', error);
     process.exit(1);
   }
 })();

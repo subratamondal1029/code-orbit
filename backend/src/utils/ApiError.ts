@@ -1,4 +1,4 @@
-import type { IApiError } from "../types/ApiBase.js";
+import type { IApiError } from '../types/ApiBase.js';
 
 class ApiError extends Error implements IApiError {
   success: boolean;
@@ -10,9 +10,9 @@ class ApiError extends Error implements IApiError {
 
   constructor(
     status: number = 500,
-    message: string = "Something Went Wrong",
+    message: string = 'Something Went Wrong',
     errors = [],
-    stack = ""
+    stack = ''
   ) {
     super(message);
 

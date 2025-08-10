@@ -1,4 +1,4 @@
-import { model, Schema } from "mongoose";
+import { model, Schema } from 'mongoose';
 
 const aiBotSchema = new Schema(
   {
@@ -14,6 +14,6 @@ const aiBotSchema = new Schema(
   { timestamps: true }
 );
 
-const AiBot = model("AiBot", aiBotSchema);
+const AiBot = model('AiBot', aiBotSchema);
 
 export default AiBot;

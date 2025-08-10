@@ -1,5 +1,5 @@
-import { model, Schema } from "mongoose";
-import { SUPPORTED_lANGUAGES } from "../constants.js";
+import { model, Schema } from 'mongoose';
+import { SUPPORTED_lANGUAGES } from '../constants.js';
 
 const codeSchema = new Schema(
   {
@@ -16,4 +16,4 @@ const codeSchema = new Schema(
   { timestamps: true }
 );
 
-const Code = model("Code", codeSchema);
+const Code = model('Code', codeSchema);

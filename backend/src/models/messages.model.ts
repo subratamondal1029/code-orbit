@@ -1,20 +1,20 @@
-import { model, Schema } from "mongoose";
+import { model, Schema } from 'mongoose';
 
 const messageSchema = new Schema(
   {
     roomId: {
       type: Schema.Types.ObjectId,
-      ref: "Room",
+      ref: 'Room',
       required: true,
     },
     senderType: {
       type: String,
-      enum: ["User", "AiBot"],
+      enum: ['User', 'AiBot'],
       required: true,
     },
     sender: {
       type: Schema.Types.ObjectId,
-      refPath: "senderType",
+      refPath: 'senderType',
       required: true,
     },
     content: {
@@ -26,6 +26,6 @@ const messageSchema = new Schema(
   { timestamps: true }
 );
 
-const Message = model("Message", messageSchema);
+const Message = model('Message', messageSchema);
 
 export default Message;

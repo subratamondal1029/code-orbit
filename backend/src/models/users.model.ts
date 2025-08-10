@@ -1,5 +1,5 @@
-import mongoose, { model, Schema } from "mongoose";
-import bcrypt from "bcrypt";
+import mongoose, { model, Schema } from 'mongoose';
+import bcrypt from 'bcrypt';
 
 const userSchema = new Schema(
   {
@@ -24,8 +24,8 @@ const userSchema = new Schema(
     },
     provider: {
       type: String, // e.g., 'local', 'google', 'github'
-      enum: ["local", "google", "github"],
-      default: "local",
+      enum: ['local', 'google', 'github'],
+      default: 'local',
     },
     password: {
       type: String,
@@ -42,7 +42,7 @@ const userSchema = new Schema(
   { timestamps: true }
 );
 
-userSchema.pre("save", async function (next) {
+userSchema.pre('save', async function (next) {
   if (!this.isModified(this.password)) return next();
 
   const hashed = await bcrypt.hash(this.password, 10);
@@ -56,6 +56,6 @@ userSchema.methods.comparePassword = async function (
   return await bcrypt.compare(candidatePassword, this.password);
 };
 
-const user = model("User", userSchema);
+const user = model('User', userSchema);
 
 export default user;

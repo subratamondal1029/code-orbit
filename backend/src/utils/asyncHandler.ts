@@ -1,6 +1,6 @@
-import { Request, Response, NextFunction } from "express";
-import { IApiError } from "../types/ApiBase.js";
-import ApiError from "./ApiError.js";
+import { Request, Response, NextFunction } from 'express';
+import { IApiError } from '../types/ApiBase.js';
+import ApiError from './ApiError.js';
 
 const asyncHandler =
   (fn: Function) => (req: Request, res: Response, next: NextFunction) =>
@@ -10,7 +10,7 @@ const asyncHandler =
       if (err instanceof Error) {
         errorObj = new ApiError(
           500,
-          err.message || "Something went wrong",
+          err.message || 'Something went wrong',
           [],
           err.stack
         );
