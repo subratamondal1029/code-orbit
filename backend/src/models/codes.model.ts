@@ -17,3 +17,5 @@ const codeSchema = new Schema(
 );
 
 const Code = model("Code", codeSchema);
+
+export default Code;
